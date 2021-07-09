@@ -12,6 +12,7 @@ final class SearchViewController: UIViewController {
     //MARK: - Private properties
     let searchView = SearchView()
 
+
     //MARK: - UIViewController
 
     override func viewWillAppear(_ animated: Bool) {
@@ -22,6 +23,7 @@ final class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = searchView
+        searchView.delegate = self
     }
 
     //MARK: - Private methods
@@ -35,3 +37,12 @@ final class SearchViewController: UIViewController {
     }
 }
 
+//MARK: - SearchViewDelegate
+
+extension SearchViewController: SearchViewDelegate {
+    func openItemsViewController(name: String, imageName: String) {
+        let vc = ItemViewController()
+        vc.setupItemInfo(itemName: name, itemImageName: imageName)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
