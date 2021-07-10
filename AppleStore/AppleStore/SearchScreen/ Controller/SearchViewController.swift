@@ -10,20 +10,19 @@ import UIKit
 final class SearchViewController: UIViewController {
 
     //MARK: - Private properties
+
     let searchView = SearchView()
 
-
     //MARK: - UIViewController
+
+    override func loadView() {
+        view = searchView
+        searchView.delegate = self
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupNavigation()
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view = searchView
-        searchView.delegate = self
     }
 
     //MARK: - Private methods

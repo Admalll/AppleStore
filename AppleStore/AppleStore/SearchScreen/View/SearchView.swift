@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol SearchViewDelegate: AnyObject {
+    func openItemsViewController(name: String, imageName: String)
+}
+
 final class SearchView: UIView {
 
     //MARK: - Visual components
@@ -35,6 +39,7 @@ final class SearchView: UIView {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+        setupView()
     }
 
     //MARK: - Private methods
@@ -213,8 +218,4 @@ final class SearchView: UIView {
             break
         }
     }
-}
-
-protocol SearchViewDelegate: AnyObject {
-    func openItemsViewController(name: String, imageName: String)
 }
