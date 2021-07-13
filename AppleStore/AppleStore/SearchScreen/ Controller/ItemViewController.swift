@@ -11,9 +11,9 @@ final class ItemViewController: UIViewController {
 
     //MARK: - Visual components
     private let itemImagesScrollView = UIScrollView()
-    private let firstItemImage = UIImageView()
-    private let secondItemImage = UIImageView()
-    private let thirdItemImage = UIImageView()
+    private let firstItemImageView = UIImageView()
+    private let secondItemImageView = UIImageView()
+    private let thirdItemImageView = UIImageView()
     private let itemLabel = UILabel()
     private let shipmentOptionsLabel = UILabel()
     private let shipmentDateLabel = UILabel()
@@ -37,9 +37,9 @@ final class ItemViewController: UIViewController {
     //MARK: - Public methods
 
     func setupItemInfo(itemName: String, firstItemImageName: String, secondItemImageName: String, thirdItemImageName: String) {
-        firstItemImage.image = UIImage(named: firstItemImageName)
-        secondItemImage.image = UIImage(named: secondItemImageName)
-        thirdItemImage.image = UIImage(named: thirdItemImageName)
+        firstItemImageView.image = UIImage(named: firstItemImageName)
+        secondItemImageView.image = UIImage(named: secondItemImageName)
+        thirdItemImageView.image = UIImage(named: thirdItemImageName)
         itemLabel.text = itemName
     }
 
@@ -48,9 +48,9 @@ final class ItemViewController: UIViewController {
     private func setupView() {
         view.backgroundColor = .black
 
-        setupFirstItemImage()
-        setupSecondItemImage()
-        setupThirdItemImage()
+        setupFirstItemImageView()
+        setupSecondItemImageView()
+        setupThirdItemImageView()
         setupItemLabel()
         setupNavigationBar()
         setupShipmentOptionsLabel()
@@ -76,22 +76,22 @@ final class ItemViewController: UIViewController {
         itemImagesScrollView.isPagingEnabled = false
     }
 
-    private func setupFirstItemImage() {
-        firstItemImage.frame = CGRect(x: 0, y: 0, width: 250, height: 250)
-        itemImagesScrollView.addSubview(firstItemImage)
-        firstItemImage.contentMode = .scaleAspectFit
+    private func setupFirstItemImageView() {
+        firstItemImageView.frame = CGRect(x: 0, y: 0, width: 250, height: 250)
+        itemImagesScrollView.addSubview(firstItemImageView)
+        firstItemImageView.contentMode = .scaleAspectFit
     }
 
-    private func setupSecondItemImage() {
-        secondItemImage.frame = CGRect(x: 260, y: 0, width: 250, height: 250)
-        itemImagesScrollView.addSubview(secondItemImage)
-        secondItemImage.contentMode = .scaleAspectFit
+    private func setupSecondItemImageView() {
+        secondItemImageView.frame = CGRect(x: 260, y: 0, width: 250, height: 250)
+        itemImagesScrollView.addSubview(secondItemImageView)
+        secondItemImageView.contentMode = .scaleAspectFit
     }
 
-    private func setupThirdItemImage() {
-        thirdItemImage.frame = CGRect(x: 520, y: 0, width: 250, height: 250)
-        itemImagesScrollView.addSubview(thirdItemImage)
-        thirdItemImage.contentMode = .scaleAspectFit
+    private func setupThirdItemImageView() {
+        thirdItemImageView.frame = CGRect(x: 520, y: 0, width: 250, height: 250)
+        itemImagesScrollView.addSubview(thirdItemImageView)
+        thirdItemImageView.contentMode = .scaleAspectFit
     }
 
     private func setupNavigationBar() {

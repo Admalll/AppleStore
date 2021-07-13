@@ -31,6 +31,23 @@ final class SearchView: UIView {
 
     //MARK: - Private properties
     weak var delegate: SearchViewDelegate?
+    private var itemsInfoDictionary = [(name: "Чехол Incase Flat для MacBook pro 16 дюймов",
+                                        firstImageName: "case",
+                                        secondImageName: "case2",
+                                        thirdImageName: "case3"),
+                                       (name: "Спортивный ремешок Black Unity (для к...",
+                                                                           firstImageName: "belt",
+                                                                           secondImageName: "belt2",
+                                                                           thirdImageName: "belt3"),
+                                       (name: "Кожаный чехол для MacBook Pro 16 дюймов, золотой",
+                                                                           firstImageName: "caseBown",
+                                                                           secondImageName: "caseBown2",
+                                                                           thirdImageName: "caseBown3"),
+                                       (name: "iPhone 12 Pro Max 256 GB",
+                                                                           firstImageName: "iphone",
+                                                                           secondImageName: "iphone2",
+                                                                           thirdImageName: "iphone3")
+    ]
 
     //MARK: - Initializators
 
@@ -108,48 +125,52 @@ final class SearchView: UIView {
         firstItemView.frame = CGRect(x: 0, y: 0, width: 150, height: 200)
         firstItemView.backgroundColor = UIColor(named: "AppGray")
         firstItemView.layer.cornerRadius = 10
-        createImageForItem(imageName: "case", itemView: firstItemView, width: 100, aligmentX: 0)
-        createLabelForItem(text: "Чехол Incase Flat для MacBook pro 16 дюймов", itemView: firstItemView)
+        createImageForItem(imageName: itemsInfoDictionary[0].firstImageName, itemView: firstItemView, width: 100, aligmentX: 0)
+        createLabelForItem(text: itemsInfoDictionary[0].name, itemView: firstItemView)
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(openItemDetails(sender:)))
         firstItemView.isUserInteractionEnabled = true
         firstItemView.addGestureRecognizer(tapGestureRecognizer)
         itemsScrollView.addSubview(firstItemView)
+        firstItemView.tag = 0
     }
 
     private func setupSecondItemView() {
         secondItemView.frame = CGRect(x: 160, y: 0, width: 150, height: 200)
         secondItemView.backgroundColor = UIColor(named: "AppGray")
         secondItemView.layer.cornerRadius = 10
-        createImageForItem(imageName: "belt", itemView: secondItemView, width: 30, aligmentX: 40)
-        createLabelForItem(text: "Спортивный ремешок Black Unity (для к...", itemView: secondItemView)
+        createImageForItem(imageName: itemsInfoDictionary[1].firstImageName, itemView: secondItemView, width: 30, aligmentX: 40)
+        createLabelForItem(text: itemsInfoDictionary[1].name, itemView: secondItemView)
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(openItemDetails(sender:)))
         secondItemView.isUserInteractionEnabled = true
         secondItemView.addGestureRecognizer(tapGestureRecognizer)
         itemsScrollView.addSubview(secondItemView)
+        secondItemView.tag = 1
     }
 
     private func setupThirdItemView() {
         thirdItemView.frame = CGRect(x: 320, y: 0, width: 150, height: 200)
         thirdItemView.backgroundColor = UIColor(named: "AppGray")
         thirdItemView.layer.cornerRadius = 10
-        createImageForItem(imageName: "caseBown", itemView: thirdItemView, width: 100, aligmentX: 0)
-        createLabelForItem(text: "Кожаный чехол для MacBook Pro 16 дюймов, золотой", itemView: thirdItemView)
+        createImageForItem(imageName: itemsInfoDictionary[2].firstImageName, itemView: thirdItemView, width: 100, aligmentX: 0)
+        createLabelForItem(text: itemsInfoDictionary[2].name, itemView: thirdItemView)
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(openItemDetails(sender:)))
         thirdItemView.isUserInteractionEnabled = true
         thirdItemView.addGestureRecognizer(tapGestureRecognizer)
         itemsScrollView.addSubview(thirdItemView)
+        thirdItemView.tag = 2
     }
 
     private func setupFourthItemView() {
         fourthItemView.frame = CGRect(x: 480, y: 0, width: 150, height: 200)
         fourthItemView.backgroundColor = UIColor(named: "AppGray")
         fourthItemView.layer.cornerRadius = 10
-        createImageForItem(imageName: "iphone", itemView: fourthItemView, width: 100, aligmentX: 0)
-        createLabelForItem(text: "iPhone 12 Pro Max 256 GB", itemView: fourthItemView)
+        createImageForItem(imageName: itemsInfoDictionary[3].firstImageName, itemView: fourthItemView, width: 100, aligmentX: 0)
+        createLabelForItem(text: itemsInfoDictionary[3].name, itemView: fourthItemView)
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(openItemDetails(sender:)))
         fourthItemView.isUserInteractionEnabled = true
         fourthItemView.addGestureRecognizer(tapGestureRecognizer)
         itemsScrollView.addSubview(fourthItemView)
+        fourthItemView.tag = 3
     }
 
     private func createImageForItem(imageName: String, itemView: UIView, width: Int, aligmentX: Int) {
@@ -231,17 +252,8 @@ final class SearchView: UIView {
     }
 
     @objc private func openItemDetails(sender: UITapGestureRecognizer) {
-        switch sender.view {
-        case firstItemView:
-            delegate?.openItemsViewController(name: "Чехол Incase Flat для MacBook pro 16 дюймов", firstImageName: "case", secondImageName: "case2", thirdImageName: "case3")
-        case secondItemView:
-            delegate?.openItemsViewController(name: "Спортивный ремешок Black Unity (для к...", firstImageName: "belt", secondImageName: "belt2", thirdImageName: "belt3")
-        case thirdItemView:
-            delegate?.openItemsViewController(name: "Кожаный чехол для MacBook Pro 16 дюймов, золотой", firstImageName: "caseBown", secondImageName: "caseBown2", thirdImageName: "caseBown3")
-        case fourthItemView:
-            delegate?.openItemsViewController(name: "iPhone 12 Pro Max 256 GB", firstImageName: "iphone", secondImageName: "iphone2", thirdImageName: "iphone3")
-        default:
-            break
-        }
+        guard let index = sender.view?.tag else { return }
+        let itemInfo = itemsInfoDictionary[index]
+        delegate?.openItemsViewController(name: itemInfo.name, firstImageName: itemInfo.firstImageName, secondImageName: itemInfo.secondImageName, thirdImageName: itemInfo.thirdImageName)
     }
 }
