@@ -19,6 +19,7 @@
 		F577EAB326986D6B00910339 /* BusketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EAB226986D6B00910339 /* BusketViewController.swift */; };
 		F577EAB7269875E100910339 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EAB6269875E100910339 /* SearchView.swift */; };
 		F5D2EFE02698E94F00C538BC /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2EFDF2698E94F00C538BC /* ItemViewController.swift */; };
+		F5D2EFE2269D9D1300C538BC /* ItemWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2EFE1269D9D1300C538BC /* ItemWebViewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		F577EAB226986D6B00910339 /* BusketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusketViewController.swift; sourceTree = "<group>"; };
 		F577EAB6269875E100910339 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		F5D2EFDF2698E94F00C538BC /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		F5D2EFE1269D9D1300C538BC /* ItemWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemWebViewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			children = (
 				F577EA96269831EF00910339 /* SearchViewController.swift */,
 				F5D2EFDF2698E94F00C538BC /* ItemViewController.swift */,
+				F5D2EFE1269D9D1300C538BC /* ItemWebViewViewController.swift */,
 			);
 			path = " Controller";
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				F577EAB7269875E100910339 /* SearchView.swift in Sources */,
 				F577EAAA2698599E00910339 /* BuyViewController.swift in Sources */,
 				F577EA93269831EF00910339 /* AppDelegate.swift in Sources */,
+				F5D2EFE2269D9D1300C538BC /* ItemWebViewViewController.swift in Sources */,
 				F577EA95269831EF00910339 /* SceneDelegate.swift in Sources */,
 				F5D2EFE02698E94F00C538BC /* ItemViewController.swift in Sources */,
 			);

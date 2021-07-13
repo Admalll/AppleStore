@@ -74,6 +74,8 @@ final class ItemViewController: UIViewController {
         itemImagesScrollView.contentSize = CGSize(width: 770, height: 250)
         itemImagesScrollView.showsHorizontalScrollIndicator = false
         itemImagesScrollView.isPagingEnabled = false
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(itemImageTap))
+        itemImagesScrollView.addGestureRecognizer(tapGestureRecognizer)
     }
 
     private func setupFirstItemImageView() {
@@ -193,5 +195,11 @@ final class ItemViewController: UIViewController {
         itemPriceLabel.font = UIFont.boldSystemFont(ofSize: 14)
         itemPriceLabel.frame = CGRect(x: 150, y: 150, width: 150, height: 20)
         view.addSubview(itemPriceLabel)
+    }
+
+    @objc private func itemImageTap() {
+        let viewController = ItemWebViewViewController()
+        viewController.itemName = itemLabel.text
+        present(viewController, animated: true, completion: nil)
     }
 }
