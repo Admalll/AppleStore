@@ -39,9 +39,9 @@ final class SearchViewController: UIViewController {
 //MARK: - SearchViewDelegate
 
 extension SearchViewController: SearchViewDelegate {
-    func openItemsViewController(name: String, imageName: String) {
+    func openItemsViewController(name: String, firstImageName: String, secondImageName: String, thirdImageName: String) {
         let vc = ItemViewController()
-        vc.setupItemInfo(itemName: name, itemImageName: imageName)
+        vc.setupItemInfo(itemName: name, firstItemImageName: firstImageName, secondItemImageName: secondImageName, thirdItemImageName: thirdImageName)
         navigationController?.pushViewController(vc, animated: true)
     }
 }
