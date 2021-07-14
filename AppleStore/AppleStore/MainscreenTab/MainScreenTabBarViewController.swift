@@ -40,26 +40,26 @@ final class MainScreenTabBarViewController: UITabBarController {
 
     private func setupBuyViewController() {
         buyViewController.title = "Купить"
-        buyViewController.tabBarItem.image = UIImage(systemName: "laptopcomputer.and.iphone")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        buyViewController.tabBarItem.image = UIImage(systemName: "laptopcomputer.and.iphone")?.withTintColor(.white)
         buyViewController.tabBarItem.selectedImage = UIImage(systemName: "laptopcomputer.and.iphone")
     }
 
     private func setupSearchViewController() {
         searchViewController.title = "Поиск"
-        searchViewController.navigationController?.tabBarItem.image = UIImage(systemName: "magnifyingglass")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        searchViewController.navigationController?.tabBarItem.image = UIImage(systemName: "magnifyingglass")?.withTintColor(.white)
         searchViewController.navigationController?.tabBarItem.selectedImage = UIImage(systemName: "magnifyingglass")
     }
 
     private func setupForYouViewController() {
         forYouViewController.title = "Для вас"
-        forYouViewController.tabBarItem.image = UIImage(systemName: "person.crop.circle.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        forYouViewController.tabBarItem.image = UIImage(systemName: "person.crop.circle.fill")?.withTintColor(.white)
         forYouViewController.tabBarItem.selectedImage = UIImage(systemName: "person.crop.circle.fill")
     }
 
     private func setupBusketViewController() {
         busketViewController.title = "Корзина"
         busketViewController.tabBarItem.image = UIImage(systemName: "case")
-        busketViewController.tabBarItem.selectedImage = UIImage(systemName: "case")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        busketViewController.tabBarItem.selectedImage = UIImage(systemName: "case")?.withTintColor(.white)
     }
 
 }

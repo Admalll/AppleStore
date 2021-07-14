@@ -7,4 +7,8 @@
 
 import UIKit
 
-final class BuyViewController: UIViewController { }
+final class BuyViewController: UIViewController {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+}
