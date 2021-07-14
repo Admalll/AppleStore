@@ -7,4 +7,8 @@
 
 import UIKit
 
-final class BusketViewController: UIViewController { }
+final class BusketViewController: UIViewController {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+}

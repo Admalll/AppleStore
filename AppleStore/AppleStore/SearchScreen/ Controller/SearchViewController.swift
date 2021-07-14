@@ -14,10 +14,10 @@ final class SearchViewController: UIViewController {
     let searchView = SearchView()
 
     //MARK: - UIViewController
-
     override func loadView() {
         view = searchView
         searchView.delegate = self
+        navigationController?.navigationBar.barStyle = .black
     }
 
     override func viewWillAppear(_ animated: Bool) {
