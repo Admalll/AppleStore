@@ -17,10 +17,19 @@ final class StartViewController: UIViewController {
 
     //MARK: - UIViewController
 
+    override func loadView() {
+        super.loadView()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupView()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        showOnboarding()
     }
 
     //MARK: - Private methods
@@ -32,6 +41,14 @@ final class StartViewController: UIViewController {
         setupLoadingProgressView()
         setupLoadingImageView()
         setupTimer()
+    }
+
+    private func showOnboarding() {
+        guard UserDefaults.standard.value(forKey: "onboard") as? String != "true" else { return }
+        let onboardVC = OnboardingViewController()
+        onboardVC.modalPresentationStyle = .fullScreen
+        present(onboardVC, animated: true)
+        UserDefaults.standard.set("true", forKey: "onboard")
     }
 
     private func setupLoadingProgressView() {

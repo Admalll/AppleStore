@@ -21,6 +21,9 @@
 		F5D2EFE02698E94F00C538BC /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2EFDF2698E94F00C538BC /* ItemViewController.swift */; };
 		F5D2EFE2269D9D1300C538BC /* ItemWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2EFE1269D9D1300C538BC /* ItemWebViewViewController.swift */; };
 		F5D2EFE7269EC12500C538BC /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2EFE6269EC12500C538BC /* StartViewController.swift */; };
+		F5D2EFEB269EDF5600C538BC /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2EFEA269EDF5600C538BC /* OnboardingViewController.swift */; };
+		F5D2EFED269EE32100C538BC /* Pages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2EFEC269EE32100C538BC /* Pages.swift */; };
+		F5D2EFEF269EE7CA00C538BC /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2EFEE269EE7CA00C538BC /* OnboardingPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		F5D2EFDF2698E94F00C538BC /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		F5D2EFE1269D9D1300C538BC /* ItemWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemWebViewViewController.swift; sourceTree = "<group>"; };
 		F5D2EFE6269EC12500C538BC /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		F5D2EFEA269EDF5600C538BC /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		F5D2EFEC269EE32100C538BC /* Pages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pages.swift; sourceTree = "<group>"; };
+		F5D2EFEE269EE7CA00C538BC /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,7 @@
 		F577EA91269831EF00910339 /* AppleStore */ = {
 			isa = PBXGroup;
 			children = (
+				F5D2EFE9269EDE1400C538BC /* Onboarding */,
 				F5D2EFE8269EC12900C538BC /* StartScreen */,
 				F577EAB126986D6100910339 /* BusketScreen */,
 				F577EAAE26986C5A00910339 /* ForYouScreen */,
@@ -163,6 +170,16 @@
 			path = StartScreen;
 			sourceTree = "<group>";
 		};
+		F5D2EFE9269EDE1400C538BC /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				F5D2EFEA269EDF5600C538BC /* OnboardingViewController.swift */,
+				F5D2EFEE269EE7CA00C538BC /* OnboardingPageViewController.swift */,
+				F5D2EFEC269EE32100C538BC /* Pages.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -240,10 +257,13 @@
 				F577EAB7269875E100910339 /* SearchView.swift in Sources */,
 				F5D2EFE7269EC12500C538BC /* StartViewController.swift in Sources */,
 				F577EAAA2698599E00910339 /* BuyViewController.swift in Sources */,
+				F5D2EFEB269EDF5600C538BC /* OnboardingViewController.swift in Sources */,
 				F577EA93269831EF00910339 /* AppDelegate.swift in Sources */,
 				F5D2EFE2269D9D1300C538BC /* ItemWebViewViewController.swift in Sources */,
 				F577EA95269831EF00910339 /* SceneDelegate.swift in Sources */,
 				F5D2EFE02698E94F00C538BC /* ItemViewController.swift in Sources */,
+				F5D2EFEF269EE7CA00C538BC /* OnboardingPageViewController.swift in Sources */,
+				F5D2EFED269EE32100C538BC /* Pages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
